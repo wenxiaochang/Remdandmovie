@@ -1,0 +1,1 @@
+<view><text bindtap='ontap'>开启</text></view>

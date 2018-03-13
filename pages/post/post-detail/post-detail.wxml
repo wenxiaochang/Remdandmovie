@@ -1,0 +1,24 @@
+<view class='wrap'>
+<image class='head-image' src="{{isplay?posdata.music.coverImgUrl:posdata.post_img}}"></image>
+  <!-- <image class='head-image' wx:if="{{isplay}}" src="{{posdata.music.coverImgUrl}}"></image>
+  <image class='head-image' wx:else src="{{posdata.post_img}}"></image> -->
+  <!--使用数据绑定 用三元运算符进行true false 判断  -->
+  <image class='audio' catchtap='onplay' src='{{isplay?"/images/music/music-stop.png":"/images/music/music-start.png"}}'></image>
+  <view class='author-data'>
+    <image class='avatar' src='/images/avatar/2.png'></image>
+    <text class='author'>{{posdata.author}}</text>
+    <text class='const-text'>发表</text>
+    <text class='date'>{{posdata.datetime}}</text>
+  </view>
+  <text class='title'>{{posdata.title}}</text>
+  <view class='tool'>
+    <view class='circle-img'>
+    <image  catchtap='oncollection' src='{{collected?"/images/icon/collection.png":"/images/icon/collection-anti.png"}}'></image>
+      <!-- <image wx:if="{{collected}}" catchtap='oncollection' src='/images/icon/collection.png'></image>
+      <image wx:else catchtap='oncollection' src='/images/icon/collection-anti.png'></image> -->
+      <image class='share-img' catchtap='onshare' src='/images/icon/share.png'></image>
+    </view>
+    <view class='horizon'></view>
+  </view>
+  <text class='detail'>{{posdata.content_detail}}</text>
+</view>
